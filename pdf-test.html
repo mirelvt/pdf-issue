@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example PDF</title>
+    <link rel="stylesheet" href="print.css">
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="159mm" height="75mm"
+        viewBox="0 0 600 275" class="svg-month-diagram">
+
+        <defs>
+            {# grid pattern #}
+            <pattern id="grid" width="600" height="25"
+                    patternUnits="userSpaceOnUse" x="0" y="204">
+                <line x1="0" y1="0"  x2="600" y2="0"
+                    class="grid-lines" />
+            </pattern>
+        </defs>
+
+        <svg width="600" height="204" viewBox="0 0 600 204">
+            <rect class="background-grid" x="55" y="0" width="545"
+                height="204" fill="url(#grid)" />
+        </svg>
+
+        <!-- x-axis -->
+        <line x1="55" y1="204"  x2="100%" y2="204" class="x-axis" />
+
+        <!-- move 43 -->
+        <g class="axis-x-labels" transform="translate(87, 225)">
+            <text x="0" text-anchor="middle">jan</text>
+            <text x="43" text-anchor="middle">feb</text>
+            <text x="86" text-anchor="middle">mrt</text>
+            <text x="129" text-anchor="middle">apr</text>
+            <text x="172" text-anchor="middle">mei</text>
+            <text x="215" text-anchor="middle">jun</text>
+            <text x="258" text-anchor="middle">jul</text>
+            <text x="302" text-anchor="middle">aug</text>
+            <text x="345" text-anchor="middle">sep</text>
+            <text x="378" text-anchor="middle">okt</text>
+            <text x="432" text-anchor="middle">nov</text>
+            <text x="476" text-anchor="middle">dec</text>
+        </g>
+
+        <!-- y-axis -->
+        <g class="axis-y-labels" transform="translate(45, 6)">
+            <text y="0" text-anchor="end">16</text>
+            <text y="25" text-anchor="end">14</text>
+            <text y="50" text-anchor="end">12</text>
+            <text y="75" text-anchor="end">10</text>
+            <text y="100" text-anchor="end">8</text>
+            <text y="125" text-anchor="end">6</text>
+            <text y="150" text-anchor="end">4</text>
+            <text y="175" text-anchor="end">2</text>
+            <text y="200" text-anchor="end">0</text>
+        </g>
+    </svg>
+</body>
+</html>

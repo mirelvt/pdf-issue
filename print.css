@@ -1,0 +1,36 @@
+@page {
+  size: A4;
+  margin: 21mm 14mm 24.5mm 14mm;
+  padding: 0;
+  @bottom-right {
+    content: "Pagina " counter(page);
+    font-family: CalvertLight;
+    font-size: 8.5pt;
+    color: #47545c;
+    padding-top: 7.8pt; }
+
+  @bottom-left {
+    content: flow(footer); } }
+
+@page :first {
+  margin: 7mm;
+  @bottom-right {
+    content: normal; } }
+
+@page page-toc {
+  @bottom-right {
+    content: normal; } }
+
+.x-axis {
+  stroke: #7c8388;
+  stroke-width: 0.1; }
+
+.axis-x-labels text {
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.grid-lines {
+  stroke: #cccfd1;
+  stroke-width: 0.1; }
